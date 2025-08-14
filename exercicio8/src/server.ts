@@ -1,6 +1,7 @@
 import express, { Express, Request, response, Response } from 'express';
 import cep from 'cep-promise';
 import validationBr from 'validation-br';
+import * as zod from 'zod';
 
 const app: Express = express();
 const port: number = 3000;
@@ -57,6 +58,18 @@ function validaCliente(cliente: any): cliente is ICliente
 app.post('/clientes', async (req: Request<ICliente>, res: Response) => {
     
     const cliente: any = req.body;
+
+    const clienteSchema = zod.object({
+        cpf: zod.string(),
+        idade: zod.number().optional()
+    });
+
+    const result: any = clienteSchema.safeParse(cliente);    
+
+    if (!result.success) {       
+        return res.json({ valido: false, msg: 'Dados inválidos', errors: result.error.issues })
+    }
+    
 
     // verificar se todos os campos para um cliente foram recebidos
     if (validaCliente(cliente)) {
