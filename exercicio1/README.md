@@ -1,4 +1,4 @@
-# Exercício 1 
+# Exercício 1 - Configuração do Ambiente e Primeiro "Hello World" com TypeScript
 
 1. Iniciar um projeto com typescript
 2. Configuração de scritps no package.json

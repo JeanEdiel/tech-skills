@@ -1,4 +1,4 @@
-# Exercício 2
+# Exercício 2 - Tipos Primitivos e Estruturados
 
 1. Declarar as seguintes variáveis, atribuindo valores e explicitando seus tipos:
     1. Uma string para nome de produto
