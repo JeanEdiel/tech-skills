@@ -1,0 +1,42 @@
+{
+  "name": "meu-projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:ts": "ts-node src/server.ts",
+    "start:dev": "nodemon --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "mvc",
+    "exemplo",
+    "estrutura",
+    "arquitetura"
+  ],
+  "author": {
+    "name": "Jean Ediel de Mello",
+    "email": "mello.jeanediel@hotmail.com"
+  },
+  "contributors": [],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "luxon": "^3.7.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^24.3.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">= 21.7.3",
+    "npm": ">= 10.5.0"
+  }
+}

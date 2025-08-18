@@ -1,0 +1,8 @@
+
+
+class UserModel
+{
+    
+}
+
+export { UserModel };
